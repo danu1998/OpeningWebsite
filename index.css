@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+}  
+@keyframes slideUp {
+  0%{height: 0vh; }
+  50% {height: 100vh; bottom:0;}
+  100% {bottom: 100vh;}
+}
+body:before {
+  content:'';
+  height: 0vh;
+  width: 100vw;
+  background-color: #5DADE2;
+  position:absolute;
+  bottom:0;
+  z-index: 100;  
+  animation-name: slideUp;
+  animation-duration: 1s;
+}
+@keyframes slideUp2 {
+  0%{height: 100vh; } 
+  50% {height: 100vh; bottom:0;}
+  100% {bottom: 100vh;}
+}
+body:after {
+  content:'';
+  height: 0vh;
+  width: 100vw;
+  background-color: white;
+  position:absolute;
+  bottom:0;
+  z-index: 90;  
+  animation-name: slideUp2;
+  animation-duration: 1s;
+}
+.bigbox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  z-index: 5;
+  overflow: hidden;
+}
+@keyframes slideIn {
+  0%{right: -800px; }
+  50%{right: -800px; }
+  100% {right: -600px;}
+}
+.bigbox:after {
+  content: '';
+  height: 110px;
+  width: 1600px;
+  background-color: #5DADE2;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+
+.nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.navContain {
+  width: 1200px;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 360px;
+  height: 240px;
+}
+img{
+    width: 320px;
+    height: 240px;
+}
+ 
+.contentContain {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.titleBox {
+ 
+}
+@keyframes shrink {
+  
+  0%   {height: 100vh; width: 100vw; right: 0;}
+    55%  {height: 100vh; width: 100vw; right: 0;}
+    100% {height: 80vh; width: 700px; right: calc(calc(100vw - 1200px) / 2);}
+}
+ 
+.imgBox {
+  position: absolute;
+  right: calc(calc(100vw - 1200px) / 2);
+}
+
+.imgprofile{
+    width: 100%;
+    height: auto;
+}
+
+.mainTitle {
+  font-size: 48px;
+  color: #4a4a4a;
+}
+
